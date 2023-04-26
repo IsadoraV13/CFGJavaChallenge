@@ -50,7 +50,6 @@ public class WaterConsumptionScore {
     }
 
     public static int waterConsumptionCalculation(int dishwasherFrequency, int washingMachineFrequency) {
-
         int score = 0;
         if (dishwasherFrequency > 9) {
             score += 3;

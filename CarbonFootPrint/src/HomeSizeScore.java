@@ -77,7 +77,6 @@ public class HomeSizeScore {
                 score += 2;
                 break;
         }
-
         return score;
     }
 }

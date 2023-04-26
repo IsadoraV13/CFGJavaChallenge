@@ -63,8 +63,6 @@ public class FoodChoicesScore {
             case "vegan", "wild":
                 score += 2;
                 break;
-            default:
-                System.out.println("invalid answer");
         }
         return score;
     }

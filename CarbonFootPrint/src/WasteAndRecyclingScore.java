@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class WasteAndRecyclingScore {
     public static String getUserInputWasteProduction() {
         Scanner input = new Scanner(System.in);
-        String numCans;
+        String numBags;
         List<String> allowedUserResponses = Arrays.asList("less than 1", "1", "2", "3", "4+");
         System.out.println(ConsoleColours.GREEN_UNDERLINED + "SECTION 4:");
         System.out.println(ConsoleColours.GREEN + "This section looks at your waste production and recycling habits."
@@ -15,10 +15,9 @@ public class WasteAndRecyclingScore {
         do {
             System.out.print("How many medium bin bags do you fill each week? ");
             System.out.println("Please respond with one of the following: 'less than 1', '1', '2', '3', '4+'");
-            numCans = input.nextLine().toLowerCase();
-        } while (!allowedUserResponses.contains(numCans));
-
-        return numCans;
+            numBags = input.nextLine().toLowerCase();
+        } while (!allowedUserResponses.contains(numBags));
+        return numBags;
     }
 
     public static List<String> getUserInputRecycling() {
@@ -53,7 +52,7 @@ public class WasteAndRecyclingScore {
                 }
             } while (!allowedUserResponses.contains(recycledMaterial));
         }
-        System.out.println("_________________________________________ \n");
+        System.out.println("_____________________________________________________ \n");
         return itemList;
     }
 
@@ -75,13 +74,13 @@ public class WasteAndRecyclingScore {
                 score += 5;
                 break;
             case "1":
-                score += 20;
+                score += 10;
                 break;
             case "2":
-                score += 30;
+                score += 20;
                 break;
             case "3":
-                score += 40;
+                score += 30;
                 break;
             case "4+":
                 score += 50;
